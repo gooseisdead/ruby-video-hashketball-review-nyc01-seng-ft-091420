@@ -1,4 +1,5 @@
 # Write your code below game_hash
+require 'pty'
 
 def game_hash
   {
@@ -127,4 +128,8 @@ def game_hash
   }
 end
 
+def num_points_scored(player_name)
+  players = game_hash[:home][:players]
+  players[player_name][points].to_i
+end
 # Write code here
