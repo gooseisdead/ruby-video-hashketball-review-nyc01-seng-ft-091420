@@ -136,5 +136,5 @@ def players_only
 end
 # Write code here
 def num_points_scored(player_name)
-  return players_only[player_name][:points]
+  print players_only[player_name][2]
 end
