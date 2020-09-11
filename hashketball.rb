@@ -129,9 +129,12 @@ def game_hash
 end
 
 def players_only
-  game_hash.keys.map do |team, player|
+  players = game_hash.keys.map do |team|
+    game_hash[team][:players]
+  end
+  players.flatten
 end
 # Write code here
 def num_points_scored(player_name)
-  players[player_name][:points]
+  players_only[player_name][:points]
 end
