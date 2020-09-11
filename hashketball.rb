@@ -128,8 +128,8 @@ def game_hash
   }
 end
 
-def players
-  game_hash[:home][:players].merge(game_hash[:away][:players])
+def players_only
+  game_hash.keys.map do |team, player|
 end
 # Write code here
 def num_points_scored(player_name)
